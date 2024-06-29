@@ -1,27 +1,7 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/*h1 {
-    text-align: center;
-}
-*/
-form {
-    display: flex;
-    margin-bottom: 20px;
-}
+﻿    form {
+        display: flex;
+        margin-bottom: 20px;
+    }
 
     form input {
         flex: 1;
@@ -39,10 +19,10 @@ form {
         cursor: pointer;
     }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
+    ul {
+        list-style: none;
+        padding: 0;
+    }
 
     ul li {
         padding: 10px;
@@ -55,104 +35,120 @@ ul {
         margin-bottom: 10px;
     }
 
-        ul li.completed {
-            text-decoration: line-through;
-            color: #888;
-        }
+    ul li.completed {
+        text-decoration: line-through;
+        color: #888;
+    }
 
-        ul li button {
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
+    ul li button {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
 
+    h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
 
+    #taskForm {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
 
-h1 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-}
+    #taskInput {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
 
-#taskForm {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-#taskInput {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-right: 10px;
-}
-
-button {
-    padding: 10px 15px;
-    border: none;
-    background: #28a745;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s ease;
-}
+    button {
+        padding: 10px 15px;
+        border: none;
+        background: #28a745;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s ease;
+    }
 
     button:hover {
         background: #218838;
     }
 
-/*#taskList {
-    list-style: none;
-    padding: 0;
-}
-
-    #taskList li {
-        background: #f9f9f9;
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: background 0.3s ease;
+    .task-actions button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        margin-left: 10px;
     }
 
-        #taskList li:hover {
-            background: #f1f1f1;
-        }
+    .task-actions .complete {
+        color: #28a745;
+    }
 
-        #taskList li.completed {
-            text-decoration: line-through;
-            color: #777;
-        }*/
+    .task-actions .delete {
+        color: #dc3545;
+    }
 
-.task-actions button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    margin-left: 10px;
-}
+    .task-actions .complete:hover {
+        color: #218838;
+    }
 
-.task-actions .complete {
-    color: #28a745;
-}
+    .task-actions .delete:hover {
+        color: #c82333;
+    }
 
-.task-actions .delete {
-    color: #dc3545;
-}
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        border-top: 1px solid #e9ecef; 
+        padding: 10px 0; 
+        text-align: center; 
+        font-size: 12px; 
+    }
 
-.task-actions .complete:hover {
-    color: #218838;
-}
+    .footer .container {
+        max-width: 1000px; 
+    }
 
-.task-actions .delete:hover {
-    color: #c82333;
-}
+    .completed {
+        text-decoration: line-through; 
+        color: #aaa;
+    }
+    #taskForm {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #taskInput {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #taskForm button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #toggleTableBtn {
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 16px;
+    }
 
 
    
