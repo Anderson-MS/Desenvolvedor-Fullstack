@@ -1,8 +1,13 @@
-﻿    document.addEventListener('DOMContentLoaded', () => {
+﻿    //-------------------------------No Carregamento da Tela
+    document.addEventListener('DOMContentLoaded', () => {
         const taskForm = document.getElementById('taskForm');
         const taskInput = document.getElementById('taskInput');
-        const taskList = document.getElementById('taskList');
 
+        setTimeout(function () {            
+            let spinner = document.getElementById("spinner");
+            spinner.style.visibility = 'hidden'
+        }, 3000);
+             
         taskForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const taskName = taskInput.value.trim();
@@ -39,7 +44,7 @@
                      <a href="#" class="complete" data-id="${task.id}" style="text-decoration:none" title="Completar Tarefa">✔️</a>
                     <a href="#" class="delete" data-id="${task.id}" style="text-decoration:none" title="Deletar Tarefa">❌</a>
                 </td>
-            `;
+                `;
 
                 if (task.completed) {
                     row.classList.add('completed');
@@ -84,20 +89,21 @@
             }
         }
 
-
         async function completeTask(taskId) {
             var id = taskId;
             const response = await fetch(`/api/tasks/${id}/complete/`, { method: 'PUT' });
             fetchTasks();
         }
-        fetchTasks();
-    });
 
+        fetchTasks();     
+        
+    });
+    //-------------------------------Função de Click 
     document.getElementById('toggleTableBtn').addEventListener('click', function () {
         const taskForm = document.getElementById('taskForm');
         const taskList = document.getElementById('taskList');
         const toggleTableBtn = document.getElementById('toggleTableBtn');
-     
+
         if (taskList.style.display === 'none') {
             taskList.style.display = 'table';
             taskForm.style.display = 'none';
@@ -108,4 +114,3 @@
             toggleTableBtn.textContent = 'Listar Tarefas';
         }
     });
-
